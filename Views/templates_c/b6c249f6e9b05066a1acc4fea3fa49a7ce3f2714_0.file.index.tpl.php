@@ -1,12 +1,38 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.1.0, created on 2026-04-08 13:35:59
+  from 'C:\Users\bertrand2\Documents\demo-MVC\Views\templates\index.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.0',
+  'unifunc' => 'content_69d659bfa49150_52333076',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b6c249f6e9b05066a1acc4fea3fa49a7ce3f2714' => 
+    array (
+      0 => 'C:\\Users\\bertrand2\\Documents\\demo-MVC\\Views\\templates\\index.tpl',
+      1 => 1775655345,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_69d659bfa49150_52333076 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
     <head>
-        <title>{$vue["titre"]}</title>
+        <title><?php echo $_smarty_tpl->tpl_vars['vue']->value["titre"];?>
+</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
     </head>
 
     <body>
@@ -43,9 +69,15 @@
         </nav>
 
         <div class="container">
-            <h1>{$vue["titre"]}</h1>
-            {include file={$tpl}}
+            <h1><?php echo $_smarty_tpl->tpl_vars['vue']->value["titre"];?>
+</h1>
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['tpl']->value;
+$_prefixVariable1 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender($_prefixVariable1, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
         </div>
 
     </body>
-</html>
+</html><?php }
+}
