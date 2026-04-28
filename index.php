@@ -21,8 +21,10 @@ $pages = array(
     'categorie'   => 'CategoryController',
     'analyse'     => 'AnalyseController',
     'Accueil'     => 'HomeController',
-    'utilisateur' => 'UtilisateurController',   // ← AJOUT ICI
+    'utilisateur' => 'UtilisateurController',   
     ''            => 'HomeController'
+    'avis' => 'AvisController',
+    'signalement' => 'SignalementController',
 );
 
 $action = (isset($_GET['action'])) ? $_GET['action'] : 'list';
